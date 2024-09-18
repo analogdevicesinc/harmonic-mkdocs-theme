@@ -1,0 +1,12 @@
+site_name: My Product
+
+theme:
+  name: harmonic
+
+plugins:
+  - material/search
+
+watch:
+  - docs
+  - harmonic
+  - mkdocs-basic.yml

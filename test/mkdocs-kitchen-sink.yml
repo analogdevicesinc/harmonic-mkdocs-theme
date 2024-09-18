@@ -1,0 +1,69 @@
+site_name: My Product
+repo_url: https://github.com/analogdevicesinc/my-product
+repo_name: ""
+edit_uri: tree/main/docs
+copyright: This is a copyright statement.
+
+theme:
+  name: harmonic
+
+  # from harmonic/mkdocs_theme.yml
+  logo: assets/images/adi-logo.png
+  font:
+    text: Inter
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+
+  features:
+    - content.action.edit # add the "Edit" button to the top right of the page
+    - content.code.copy # add the "Copy" button to code blocks
+    - content.tooltips # add advanced tooltips
+    - navigation.footer # add the footer navigation
+    - navigation.instant # background loading
+    - navigation.instant.progress # background loading progress bar
+    - navigation.tabs # add tabs to the top of the page
+
+  palette:
+    # Palette for light mode
+    - scheme: harmonic-light
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette for dark mode
+    - scheme: harmonic-dark
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - material/search
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.snippets:
+      auto_append:
+        - docs/features/glossary.md
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+watch:
+  - docs
+  - harmonic
+  - mkdocs-kitchen-sink.yml

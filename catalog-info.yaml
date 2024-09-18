@@ -1,0 +1,87 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  title: Harmonic Theme for Mkdocs
+  name: harmonic-theme-for-mkdocs
+  description: The mkdocs-harmonic theme provides a consistent look and feel for
+    documentation generated using MkDocs using the ADI Harmonic design language.
+  productType: software product
+  organization: group:default/ssg
+  tags:
+    - harmonic
+    - docs
+spec:
+  type: product
+  lifecycle: release
+  system: system:default/analog-devices-products
+  owner: user:default/ganders
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  title: Harmonic Theme for Mkdocs 1.0.0
+  name: harmonic-theme-for-mkdocs-1.0.0
+  description: First release of the Harmonic Mkdocs Theme
+  releaseDate: ""
+  releaseType: major
+  qualityLevel: ga
+  licenseType: open-source
+  applicationType: desktop
+  distributionForm: source
+  feeCharged: no
+  distributionMethod: github
+  redistributionRights: source
+  version: 1.0.0
+  tags:
+    - harmonic
+    - docs
+spec:
+  type: release
+  lifecycle: release
+  owner: user:default/ganders
+  subcomponentOf: component:default/harmonic-theme-for-mkdocs
+  dependsOn:
+    - component:default/harmonic-theme-for-mkdocs-source-1.0.0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  title: Harmonic Theme for Mkdocs Source
+  name: harmonic-theme-for-mkdocs-source
+  version: main
+  description: Harmonic Mkdocs Theme
+  classification: software
+  license:
+    - Apache-2.0
+  links: []
+  tags:
+    - harmonic
+    - docs
+  annotations:
+    backstage.io/source-location: url:https://github.com/analogdevicesinc/harmonic-mkdocs-theme
+spec:
+  type: source
+  lifecycle: release
+  owner: user:default/ganders
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  title: Harmonic Theme for Mkdocs Source 1.0.0
+  name: harmonic-theme-for-mkdocs-source-1.0.0
+  version: 1.0.0
+  description: Harmonic Mkdocs Theme
+  classification: software
+  license:
+    - Apache-2.0
+  links: []
+  tags:
+    - harmonic
+    - docs
+  annotations:
+    backstage.io/source-location: url:https://github.com/analogdevicesinc/harmonic-mkdocs-theme
+spec:
+  type: source
+  lifecycle: release
+  owner: user:default/ganders
+  subcomponentOf: component:default/harmonic-theme-for-mkdocs-source
