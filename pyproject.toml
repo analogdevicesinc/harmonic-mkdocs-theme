@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "adi-mkdocs-harmonic"
-version = "0.6.0"
+version = "0.7.0"
 description = "An ADI Harmonic theme for mkdocs based on mkdocs-material"
 authors = []
 readme = "README.md"
