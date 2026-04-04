@@ -118,3 +118,11 @@ body[data-md-color-scheme="harmonic-dark"] .md-nav__link--passed {
 body[data-md-color-scheme="harmonic-dark"] .md-nav__title {
   color: var(--md-default-fg-color--lighter);
 }
+
+/**
+ * Word wrap for long code blocks to avoid horizontal scrolling.
+ */
+.md-typeset pre code {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
