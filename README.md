@@ -39,3 +39,8 @@ pip install adi-mkdocs-harmonic
     ```
 
 1. Run `mkdocs serve` in the terminal and open your web browser to <https://localhost:8000>
+
+## Deploying
+
+1. Update the `version` field in `pyproject.toml` to the new version number.
+1. `gh release create vx.y.z --target main --generate-notes`
